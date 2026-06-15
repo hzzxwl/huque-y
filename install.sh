@@ -55,7 +55,7 @@ amd64 | x86_64)
 esac
 
 show_info() {
-  echo `$(uname -r)`
+  echo $(uname -r)
 }
 
 show_info
