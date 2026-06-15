@@ -39,5 +39,3 @@ cmd=$(type -P apt)
 
 
 
-
-
