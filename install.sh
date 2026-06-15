@@ -34,6 +34,8 @@ warn() {
 # root
 [[ $EUID != 0 ]] && err "当前非 ${yellow}ROOT用户.${none}"
 
+cmd=$(type -P apt)
+[[ ! $cmd ]] && err "此脚本仅支持 ${yellow}Ubuntu${none}."
 
 
 
