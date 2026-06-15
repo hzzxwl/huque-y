@@ -38,4 +38,25 @@ cmd=$(type -P apt)
 [[ ! $cmd ]] && err "此脚本仅支持 ${yellow}Ubuntu${none}."
 
 
+# wget installed or none
+is_wget=$(type -P wget)
+
+# x64
+case $(uname -m) in
+amd64 | x86_64)
+    is_arch=amd64
+    ;;
+*aarch64* | *armv8*)
+    is_arch=arm64
+    ;;
+*)
+    err "此脚本仅支持 64 位系统..."
+    ;;
+esac
+
+show_info() {
+  echo (uname -r)
+}
+
+show_info
 
