@@ -60,3 +60,5 @@ show_info() {
 
 show_info
 
+# 6.5.0-18-generic
+
